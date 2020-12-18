@@ -6,7 +6,7 @@
 
 package module2.task3;
 
-public class Task1 {
+public class Subtask1 {
     public static void main(String[] args) {
         double q = 21;
         double w = 8;
