@@ -1,13 +1,12 @@
-package module2.task4;
-
 /*Найти в строке указанную подстроку и заменить ее на новую.
 Строку, ее подстроку для замены и новую подстроку вводит пользователь.
  */
 
+package module2.task4;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Task2 {
+public class Subtask2 {
     public static void main(String[] args) throws Exception {
 
         String original = "Change any word in this sentence. Please type it below";

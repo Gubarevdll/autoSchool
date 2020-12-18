@@ -3,7 +3,7 @@
 Также предусмотрите вывод количества пробелов.
  */
 
-package module2.task4;public class Taks1 {
+package module2.task4;public class Subtask1 {
 
     public static void main(String[] args) {
 
