@@ -25,4 +25,5 @@ package module2.task4;public class Subtask1 {
         }
         System.out.println(spaceCount);
     }
+
 }
