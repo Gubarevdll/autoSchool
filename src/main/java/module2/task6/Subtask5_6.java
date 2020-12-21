@@ -3,7 +3,7 @@ package module2.task6;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Subtask5 {
+public class Subtask5_6 {
     public static void main(String[] args) throws Exception{
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -24,3 +24,5 @@ public class Subtask5 {
 
     }
 }
+
+//В коменнтах увидел, что можно обьеденить 5-6 задачу, потому тут 2

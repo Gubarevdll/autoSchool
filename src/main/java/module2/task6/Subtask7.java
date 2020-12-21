@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-public class Subtask6 {
+public class Subtask7 {
     public static void main(String[] args) throws Exception {
         Random random = new Random();
         int secret = random.nextInt(20 + 1);
