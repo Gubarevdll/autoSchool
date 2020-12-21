@@ -1,3 +1,5 @@
+/* Ввести с клавиатуры четыре числа, и вывести максимальное из них.*/
+
 package module2.task6;
 
 import java.io.BufferedReader;

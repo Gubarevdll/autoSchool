@@ -1,3 +1,5 @@
+/*Ввести с клавиатуры три числа, и вывести их в порядке убывания.*/
+
 package module2.task6;
 
 import java.io.BufferedReader;

@@ -1,3 +1,5 @@
+/* Ввести с клавиатуры строку и число N.*/
+
 package module2.task6;
 
 import java.io.BufferedReader;

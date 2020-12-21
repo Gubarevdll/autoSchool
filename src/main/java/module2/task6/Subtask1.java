@@ -1,3 +1,5 @@
+/*Ввести с клавиатуры два числа, и вывести на экран минимальное из них.*/
+
 package module2.task6;
 
 import java.io.BufferedReader;

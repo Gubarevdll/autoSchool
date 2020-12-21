@@ -1,3 +1,5 @@
+
+/* Вывести на экран числа от 1 до 10, используя цикл while.*/
 package module2.task6;
 
 public class Subtask8 {
