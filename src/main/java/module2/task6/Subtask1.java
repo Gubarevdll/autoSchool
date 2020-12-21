@@ -9,16 +9,27 @@ public class Subtask1 {
 
         String a = reader.readLine();
         String b = reader.readLine();
+        String h = reader.readLine();
+        String k = reader.readLine();
+
 
         int x = Integer.parseInt(a.trim());
         int z = Integer.parseInt(b.trim());
+        int c = Integer.parseInt(h.trim());
+        int v = Integer.parseInt(k.trim());
         int result = 0;
 
-        if (x>z){
+        if (x>z && x>c && x>v){
             result=x;
         }
-        else {
+        else if(z>x && z>c &&z>v) {
             result=z;
+        }
+        else if(c>x && c>z && c>v){
+            result=c;
+        }
+        else if(v>x && v>x &&v>c){
+            result=v;
         }
 
         System.out.println(result);
