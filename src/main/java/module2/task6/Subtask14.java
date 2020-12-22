@@ -4,17 +4,25 @@
 
 package module2.task6;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Subtask14 {
-    public static void main(String[] args) {
-        int m = 2;
-        int n = 6;
-        //пользователь должен ввести два числа
+    public static void main(String[] args) throws Exception{
+
+        System.out.println("Введите строку:");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        int m = Integer.parseInt(reader.readLine());
+        int n = Integer.parseInt(reader.readLine());
+        //пользователь должен ввести два числа (исправил)
 
 
         for (int a = 0; a < m; a++) {
             System.out.println(); //лучше перенести в конец цикла, так как печатается пустая строка в самом начале
             for (int i = 0; i < n; i++) {
                 System.out.print(8);
+
             }
         }
     }

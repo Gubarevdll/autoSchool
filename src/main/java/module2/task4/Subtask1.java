@@ -9,15 +9,18 @@ package module2.task4;public class Subtask1 {
 
         String x = "random.w o r d";
 
+
         String first_char = x.substring(0,1);  //можно ещё использовать x.charAt(0)
+        char mid_char = x.charAt(x.length()/2);
         String last_char = x.substring(x.length()-1); //как вариант str.charAt(str.length() - 1))
 
         //вывод среднего символа?
+        //(добавил вывод среднего символа)
 
-        System.out.println("First letter - " + first_char +" last letter - " + last_char);
+        System.out.println("First letter - " + first_char +" Middle letter - "+ mid_char+ " last letter - " + last_char);
 
         int value = x.indexOf('.');
-        System.out.println(x.substring(0, value+1));
+        System.out.println("Line before dot: " + x.substring(0, value+1));
 
         int spaceCount = 0;
         for (char c : x.toCharArray()) {
@@ -25,7 +28,8 @@ package module2.task4;public class Subtask1 {
                 spaceCount++;
             }
         }
-        System.out.println(spaceCount);
+        System.out.println("Spaces count: " + spaceCount);
+
     }
 
 }

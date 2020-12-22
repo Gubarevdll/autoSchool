@@ -15,6 +15,10 @@ public class Subtask5_6 {
         //Scanner scanner = new Scanner(System.in);
         //String name = scanner.nextLine();
         //int age = scanner.nextInt();
+        /*(да, я знаком с работой сканнера, просто слышал, что в каких-то случаях он не подойдет, в то время
+        как BufferedReader универсальный и его можно использовать везде, потому так и делаю. Кстати, это так? Или можно
+        смело вместо ридера использовать сканнер?)
+         */
 
         System.out.println("Введите имя:");
         String name = reader.readLine();

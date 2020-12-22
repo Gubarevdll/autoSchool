@@ -15,11 +15,20 @@ import java.util.Collections;
 public class Subtask4 {
     public static void main(String[] args) throws Exception {
         int[] arr = initializeArray(10);
+        int[] arr_reverse = new int[10];
 
         for (int i=arr.length-1; i>=0; i--){
-            System.out.println(arr[i]); //Ты вывел числа, но не расположил их в обратном порядке в массиве.
+            int a = 0;
+            arr_reverse[a]=arr[i];
+            a++;
+        }
+
+        for (int i = 0; i < arr_reverse.length; i++ ){
+            System.out.println(arr_reverse[i]);
         }
     }
+
+    //Ты вывел числа, но не расположил их в обратном порядке в массиве.
 
 
     static int[] initializeArray(int size) throws Exception{

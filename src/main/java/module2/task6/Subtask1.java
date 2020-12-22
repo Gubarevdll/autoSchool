@@ -17,14 +17,10 @@ public class Subtask1 {
 
         int result = 0;
 
-        if (x>z){
-            result=x;
-        }
-        else {
-            result=z;
-        }
+        result = (x > z) ? x : z;
 
         //Часто в коде попадается короткая запись (x < y) ? x : y - позже почитай обязательно про неё
+        /*(Добавил с использованием конструкции этой конструкции)*/
 
         System.out.println(result);
 }}

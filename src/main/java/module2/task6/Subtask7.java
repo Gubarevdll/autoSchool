@@ -15,7 +15,8 @@ public class Subtask7 {
     public static void main(String[] args) throws Exception {
         Random random = new Random();
         int secret = random.nextInt(20 + 1);
-        System.out.println(secret); //я буду угадывать каждое число :)
+        //System.out.println(secret); //я буду угадывать каждое число :)
+        // (это я оставлял для проверки и потом забыл удалить)
 
 
             for (int i = 0; i <= 6; i++) {

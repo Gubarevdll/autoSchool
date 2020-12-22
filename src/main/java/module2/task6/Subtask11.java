@@ -8,9 +8,15 @@ public class Subtask11 {
     public static void main(String[] args) {
 
         int i = 0;
-        while (i<10){
-            System.out.println("SSSSSSSSSS"); //хитро, но давай по одной букве System.out.print("S")
-            i++;
+        int a = 0;
+
+        while (a < 10) {
+            System.out.println(" ");
+            a++;
+            while (i < 10) {
+                System.out.print("S"); //хитро, но давай по одной букве System.out.print("S")
+                i++;
+            }
         }
     }
 }
