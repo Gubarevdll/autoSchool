@@ -33,6 +33,7 @@ public class Subtask2 {
         else if(v>x && v>x &&v>c){
             result=v;
         }
+        //Так как задача про if, то решение правильное, но обычно таких конструкций не пишут :) Как вариант, использовать массив и цикл
 
         System.out.println(result);
     }

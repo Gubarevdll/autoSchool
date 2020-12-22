@@ -13,7 +13,7 @@ public class Subtask4 {
         int a=Subtask4.a, b=Subtask4.c-Subtask4.a, c=Subtask4.a+Subtask4.b+Subtask4.c;
 
 
-        System.out.println(a + " " + b + " " + c);
+        System.out.println(a + " " + b + " " + c); //результат не соответствует условию
 
         }
 

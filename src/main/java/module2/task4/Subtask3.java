@@ -15,7 +15,7 @@ public class Subtask3 {
         String sentence = "random words in this sentence";
         List<String> words = Arrays.asList(sentence.split(" "));
 
-        String longest = "1";
+        String longest = "1"; //а если сравнивать слова между собой, а не с "1". Попробуешь?
 
         for (int i=0; i<words.size(); i++){
             if (longest.length()<words.get(i).length()){

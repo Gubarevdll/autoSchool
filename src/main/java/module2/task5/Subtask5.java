@@ -25,10 +25,18 @@ public class Subtask5 {
         for (int i=0; i<second_arr.length; i++){
             second_arr[i]=big_arr[i+first_arr.length];
         }
+
+        //можно использовать один for, а внутри него условие через if
+        //         for (int i = 0; i < big_arr.length; i++) {
+        //            if (i < 10) first_arr[i] = big_arr[i];
+        //            else second_arr[i - 10] = big_arr[i];
+        //        }
+
         System.out.println("First array:");
         for (int i=0; i<first_arr.length; i++){
             System.out.println(first_arr[i]);
         }
+
         System.out.println("Second array:");
         for (int i=0; i<second_arr.length; i++){
             System.out.println(second_arr[i]);

@@ -7,7 +7,7 @@
 package module2.task6;
 
 public class Subtask16 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception { //зачем неиспользуемый Exception? До них ещё дойдёт, не переживай ))
 
         for (int i=0; i<=8; i++){
             System.out.print(8);

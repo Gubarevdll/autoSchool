@@ -11,6 +11,11 @@ public class Subtask5_6 {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        //можешь ещё попробовать
+        //Scanner scanner = new Scanner(System.in);
+        //String name = scanner.nextLine();
+        //int age = scanner.nextInt();
+
         System.out.println("Введите имя:");
         String name = reader.readLine();
         System.out.println("Введите возраст");

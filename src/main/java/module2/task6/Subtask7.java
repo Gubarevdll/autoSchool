@@ -15,7 +15,7 @@ public class Subtask7 {
     public static void main(String[] args) throws Exception {
         Random random = new Random();
         int secret = random.nextInt(20 + 1);
-        System.out.println(secret);
+        System.out.println(secret); //я буду угадывать каждое число :)
 
 
             for (int i = 0; i <= 6; i++) {
@@ -35,7 +35,7 @@ public class Subtask7 {
                     break;
                 }
             }
-            System.out.println("Это была последняя попытка");
+            System.out.println("Это была последняя попытка"); //выводится в любом случае, независимо от результата, так не должно быть
     }
     }
 

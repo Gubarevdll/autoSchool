@@ -9,7 +9,7 @@ public class Subtask11 {
 
         int i = 0;
         while (i<10){
-            System.out.println("SSSSSSSSSS");
+            System.out.println("SSSSSSSSSS"); //хитро, но давай по одной букве System.out.print("S")
             i++;
         }
     }

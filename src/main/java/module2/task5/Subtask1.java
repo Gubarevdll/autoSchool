@@ -35,12 +35,12 @@ public class Subtask1 {
 
 
     static int max(int[] array){
-        int[] sarr = array;
+        int[] sarr = array; //это лишнее, можешь сразу работать с массивом, который передаётся в метод
         int max = sarr[0];
-        for (int i=0; i<sarr.length; i++){
-            if (max < sarr[i]){
+        for (int i=0; i<sarr.length; i++){ //например, вместо sarr.length брать array.length
+            if (max < sarr[i]){ //и здесь тогда будет array[i]
                 max = sarr[i];
-            }
+            } //если у тебя только один вариант в if, то можно не использовать фигурные скобки if (max < sarr[i]) max = sarr[i];
         }
         return max;
     }

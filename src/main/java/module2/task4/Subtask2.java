@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 public class Subtask2 {
     public static void main(String[] args) throws Exception {
 
-        String original = "Change any word in this sentence. Please type it below";
+        String original = "Change any word in this sentence. Please type it below"; //Исходную строку тоже должнен вводить пользователь
         System.out.println(original);
 
         InputStreamReader r=new InputStreamReader(System.in);
@@ -26,6 +26,9 @@ public class Subtask2 {
     }
 }
 
+//Нет проверки на наличие подстроки для замены в исходной строке.
+// Программа в любом случае дорабатывает до конца, даже если ничего не вводить.
+
 
 
         /*int start = original.indexOf(line);
@@ -38,6 +41,10 @@ public class Subtask2 {
         BufferedReader br=new BufferedReader(r);
         String newword=br.readLine();*/
 
+
+//Старайся не оставлять закомменченный код.
+// Если вдруг такое потребовалось, то лучше дописать для чего заккоментили кусок кода,
+// а то через некоторое время никто и не вспомнит деталей
 
 
 

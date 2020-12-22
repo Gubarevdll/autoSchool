@@ -24,5 +24,7 @@ public class Subtask1 {
             result=z;
         }
 
+        //Часто в коде попадается короткая запись (x < y) ? x : y - позже почитай обязательно про неё
+
         System.out.println(result);
 }}

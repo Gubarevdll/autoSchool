@@ -11,7 +11,7 @@ package module2.task5;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.Collections; //не забывай удалять неиспользуемые импорты. Можно автоматом по ctrl+alt+O
 
 public class Subtask2 {
     public static void main(String[] args) throws Exception {

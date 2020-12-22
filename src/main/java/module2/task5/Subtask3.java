@@ -9,7 +9,7 @@
 
 package module2.task5;
 
-import com.sun.jdi.event.ExceptionEvent;
+//import com.sun.jdi.event.ExceptionEvent; //странный импорт, который не используется в коде
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -30,7 +30,7 @@ public class Subtask3 {
         for (int i = 0; i < array.length; i++) {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-            String a = reader.readLine();
+            String a = reader.readLine(); //программа никак не взаимодействует с пользователем. При запуске открывается консоль и не понятно, что надо делать
 
             array[i] = a;
         }
