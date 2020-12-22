@@ -26,11 +26,16 @@ public class Subtask3 {
 
     static String[] initializeArray(int size) throws Exception {
 
+        System.out.println("Введите 10 строк:");
+
         String[] array = new String[size];
         for (int i = 0; i < array.length; i++) {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-            String a = reader.readLine(); //программа никак не взаимодействует с пользователем. При запуске открывается консоль и не понятно, что надо делать
+            String a = reader.readLine();
+            //программа никак не взаимодействует с пользователем.
+            // При запуске открывается консоль и не понятно, что надо делать
+            //(исправил, добавил вывод)
 
             array[i] = a;
         }

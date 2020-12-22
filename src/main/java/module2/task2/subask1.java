@@ -10,6 +10,14 @@ import java.io.InputStreamReader;
 public class subask1 {
     public static void main(String[] args) throws Exception {
 
+        System.out.println("Hello world");
+
+        printHelloName();
+    }
+
+    static void printHelloName() throws Exception{
+        System.out.println("Введите имя");
+
         InputStreamReader r=new InputStreamReader(System.in);
 
         BufferedReader br=new BufferedReader(r);
@@ -17,8 +25,8 @@ public class subask1 {
         String name=br.readLine();
 
         System.out.println("Hello " + name);
-
     }
 }
 
 // Отсутствует метод printHelloName(), который должен запрашивать у пользователя имя
+// (Добавил метод на запрос имени)

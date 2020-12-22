@@ -27,7 +27,11 @@ public class Subtask7 {
                 String a = reader.readLine();
                 int x = Integer.parseInt(a.trim());
 
-                if (x < secret) {
+
+
+                if (i == 6) {
+                    System.out.println("Это была последняя попытка");
+                } else if (x < secret) {
                     System.out.println("Мало");
                 } else if (x > secret) {
                     System.out.println("Много");
@@ -36,7 +40,6 @@ public class Subtask7 {
                     break;
                 }
             }
-            System.out.println("Это была последняя попытка"); //выводится в любом случае, независимо от результата, так не должно быть
     }
     }
 

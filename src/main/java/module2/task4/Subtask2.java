@@ -9,9 +9,14 @@ import java.io.InputStreamReader;
 public class Subtask2 {
     public static void main(String[] args) throws Exception {
 
-        String original = "Change any word in this sentence. Please type it below"; //Исходную строку тоже должнен вводить пользователь
-        System.out.println(original);
+        System.out.println("Type the sentence:");
+        InputStreamReader a=new InputStreamReader(System.in);
+        BufferedReader bra=new BufferedReader(a);
+        String original=bra.readLine();
+        //Исходную строку тоже должнен вводить пользователь
+        //(Исправил)
 
+        System.out.println("Please choose the word you want to replace");
         InputStreamReader r=new InputStreamReader(System.in);
         BufferedReader br=new BufferedReader(r);
         String original_word=br.readLine();

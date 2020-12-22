@@ -8,15 +8,19 @@ public class Subtask11 {
     public static void main(String[] args) {
 
         int i = 0;
-        int a = 0;
 
+        while (i < 10) {
+            cicle();
+            System.out.println();
+            i++;
+        }
+    }
+
+    static void cicle() {
+        int a = 0;
         while (a < 10) {
-            System.out.println(" ");
+            System.out.print("S");
             a++;
-            while (i < 10) {
-                System.out.print("S"); //хитро, но давай по одной букве System.out.print("S")
-                i++;
-            }
         }
     }
 }
