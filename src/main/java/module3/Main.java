@@ -3,9 +3,12 @@ package module3;
 import java.util.Random;
 
 public class Main {
+
+    private static Object object;
+
     public static void main(String[] args) {
 
-        Round round = new Round(1);
+        Round round = new Round(99);
 
         System.out.println(round.name);
         System.out.println("Round point a: x=" + round.a_x +" y="+ round.a_y);
@@ -13,7 +16,7 @@ public class Main {
         System.out.println("Round radius : " + round.radius);
         System.out.println("Space = " + round.space);
 
-        Triangle triangle = new Triangle(1);
+        Triangle triangle = new Triangle(99);
         System.out.println();
 
         System.out.println(triangle.name);
@@ -25,7 +28,7 @@ public class Main {
 
         System.out.println();
 
-        Sqare sqare = new Sqare(1);
+        Sqare sqare = new Sqare(99);
 
         System.out.println(sqare.name);
         System.out.println("Sqare point a: x="+sqare.a_x+" y="+sqare.a_y );
@@ -35,5 +38,18 @@ public class Main {
         System.out.println("Spare space = " + sqare.space);
 
 
+        Object[] figures = new Object[10];
+        for (int i = 0; i < 10; i++){
+            double rand = Math.random();
+            if (rand < 0.33) {
+                figures [i] = new Sqare(i);
+            } else if (rand < 0.66) {
+                figures [i] = new Triangle(i);
+            } else {
+                figures [i] = new Round(i);
+            }
+
+            figures
+        }
     }
 }

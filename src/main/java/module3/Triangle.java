@@ -5,18 +5,18 @@ import java.util.Random;
 public class Triangle extends Figure{
 
     String name;
-    int a_x;
-    int a_y;
-    int b_x_center;
-    int b_y_center;
-    int halh_width;
-    int c_x;
-    int c_y;
-    int d_x;
-    int d_y;
-    int height;
-    int width;
-    int space;
+    double a_x;
+    double a_y;
+    double b_x_center;
+    double b_y_center;
+    double halh_width;
+    double c_x;
+    double c_y;
+    double d_x;
+    double d_y;
+    double height;
+    double width;
+    double space;
 
 
     public Triangle(int name){

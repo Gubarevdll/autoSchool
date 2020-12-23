@@ -4,25 +4,25 @@ import java.util.Random;
 
 public class Sqare extends Figure {
     String name;
-    int a_x;
-    int a_y;
-    int b_x;
-    int b_y;
-    int c_x;
-    int c_y;
-    int d_x;
-    int d_y;
-    int side_length;
-    int space;
+    double a_x;
+    double a_y;
+    double b_x;
+    double b_y;
+    double c_x;
+    double c_y;
+    double d_x;
+    double d_y;
+    double side_length;
+    double space;
 
 
     public Sqare(int name) {
         Random random = new Random();
         this.name = "Sqare №" + name;
-        this.a_x = random.nextInt(5 + 1);
-        this.a_y = random.nextInt(5 + 1);
+        this.a_x = random.nextInt(10 + 1);
+        this.a_y = random.nextInt(10 + 1);
         this.b_x = a_x;
-        this.b_y = a_y + random.nextInt(5 + 1);
+        this.b_y = a_y + random.nextInt(10 + 1);
         this.c_x = Math.abs(a_y-b_y)+a_x;
         this.c_y = a_y;
         this.d_x = c_x;
