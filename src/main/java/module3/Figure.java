@@ -3,7 +3,7 @@ package module3;
 public abstract class Figure {
 
      String name;
-     int space;
+     double space;
 
     public int getName (int name){
         this.name = "figure № " + name;

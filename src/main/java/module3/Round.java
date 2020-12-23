@@ -3,37 +3,25 @@ package module3;
 import java.util.Random;
 
 public class Round extends Figure{
+         double a_x;
+         double a_y;
+         double b_x;
+         double b_y;
+         double radius;
+         double space;
 
-    int[]arr = getCoordinats();
-    int a_x = arr[0];
-    int a_y = arr[1];
-    int b_x = arr[2];
-    int b_y = arr[3];
 
+    public Round() {
+        Random random = new Random() ;
 
-    @Override
-    public int[] getCoordinats() {
-
-        Random random = new Random();
-
-        int point_a_x_coordinate = random.nextInt(100 + 1);
-        int point_a_y_coordinate = random.nextInt(100 + 1);
-        int point_b_x_coordinate = point_a_x_coordinate;
-        int point_b_y_coordinate = random.nextInt(100 + 1);
-
-        int[]coordinats = {point_a_x_coordinate, point_a_y_coordinate, point_b_x_coordinate, point_b_y_coordinate};
-
-        return coordinats;
+        this.a_x = random.nextInt(10 + 1);
+        this.a_y = random.nextInt(10 + 1);
+        this.b_x = a_x;
+        this.b_y = random.nextInt(10 + 1);
+        this.radius = Math.abs(a_y-b_y);
+        this.space = Math.PI * (radius * radius);
     }
 
-    @Override
-    public int getName(int name) {
-        this.name = "Round № " + name;
-        return super.getName(name);
-    }
+    //to do вручную посчитать площадь
 
-    @Override
-    public int getSpace() {
-        return super.getSpace();
-    }
 }
