@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Triangle extends Figure{
 
+    String name;
     int a_x;
     int a_y;
     int b_x_center;
@@ -18,9 +19,10 @@ public class Triangle extends Figure{
     int space;
 
 
-    public Triangle(){
+    public Triangle(int name){
         Random random = new Random();
 
+        this.name = "Triangle №" + name;
         this.a_x = random.nextInt(10 + 1);
         this.a_y = random.nextInt(10 + 1);
         this.b_x_center = a_x;

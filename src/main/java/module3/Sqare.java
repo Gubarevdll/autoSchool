@@ -3,6 +3,7 @@ package module3;
 import java.util.Random;
 
 public class Sqare extends Figure {
+    String name;
     int a_x;
     int a_y;
     int b_x;
@@ -15,9 +16,9 @@ public class Sqare extends Figure {
     int space;
 
 
-    public Sqare() {
+    public Sqare(int name) {
         Random random = new Random();
-
+        this.name = "Sqare №" + name;
         this.a_x = random.nextInt(5 + 1);
         this.a_y = random.nextInt(5 + 1);
         this.b_x = a_x;
@@ -29,4 +30,5 @@ public class Sqare extends Figure {
         this.side_length = Math.abs(a_y-b_y);
         this.space = side_length*side_length;
     }
+
 }
