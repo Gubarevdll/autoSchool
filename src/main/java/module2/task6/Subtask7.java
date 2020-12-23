@@ -16,6 +16,7 @@ public class Subtask7 {
         Random random = new Random();
         int secret = random.nextInt(20 + 1);
         //System.out.println(secret); //я буду угадывать каждое число :)
+
         // (это я оставлял для проверки и потом забыл удалить)
 
 
