@@ -15,6 +15,7 @@ package module2.task4;public class Subtask1 {
         String last_char = x.substring(x.length()-1); //как вариант str.charAt(str.length() - 1))
 
         //вывод среднего символа?
+
         //(добавил вывод среднего символа)
 
         System.out.println("First letter - " + first_char +" Middle letter - "+ mid_char+ " last letter - " + last_char);

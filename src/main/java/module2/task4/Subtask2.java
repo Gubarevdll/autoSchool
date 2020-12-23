@@ -14,6 +14,7 @@ public class Subtask2 {
         BufferedReader bra=new BufferedReader(a);
         String original=bra.readLine();
         //Исходную строку тоже должнен вводить пользователь
+
         //(Исправил)
 
         System.out.println("Please choose the word you want to replace");
@@ -33,6 +34,8 @@ public class Subtask2 {
 
 //Нет проверки на наличие подстроки для замены в исходной строке.
 // Программа в любом случае дорабатывает до конца, даже если ничего не вводить.
+
+//(Исправил)
 
 
 
