@@ -2,22 +2,42 @@ package module3;
 
 public abstract class Figure {
 
-     String name;
-     double space;
+     private String name;
+     private double space;
+     private double[] coordinates;
 
-    public int getName (int name){
-        this.name = "figure № " + name;
+    protected Figure() {
+    }
+    //Здесь не совсем понятно, я не смог создать конструктов в классе неследнике,
+    //Идея предложила создать пустой конструктор и только потом получилось создать его в наследнике
+    // У меня есть конструктор с параметрами, зачем в таком случае прописывать пустой?
+
+
+    public Figure(int name) {
+        this.name = "Figure #:" + name;
+    }
+
+    public String getName() {
         return name;
     }
 
-    public int[] getCoordinats(){
-        int[]coordinates = new int[0];
+    public double getSpace() {
+        return space;
+    }
+
+    public void setSpace(double space) {
+        this.space = space;
+    }
+
+    public double[] getCoordinates() {
         return coordinates;
     }
 
-    public int getSpace(){
-        int a = 0;
-        return a;
+    public void setCoordinates() {
+        double[] coordinates = new double[0];
+        this.coordinates = coordinates;
     }
 
+    public void showCoordinates(){
+    }
 }
