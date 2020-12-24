@@ -15,14 +15,14 @@ public class subask1 {
         printHelloName();
     }
 
-    static void printHelloName() throws Exception{
+    static void printHelloName() throws Exception {
         System.out.println("Введите имя");
 
-        InputStreamReader r=new InputStreamReader(System.in);
+        InputStreamReader r = new InputStreamReader(System.in);
 
-        BufferedReader br=new BufferedReader(r);
+        BufferedReader br = new BufferedReader(r);
 
-        String name=br.readLine();
+        String name = br.readLine();
 
         System.out.println("Hello " + name);
     }

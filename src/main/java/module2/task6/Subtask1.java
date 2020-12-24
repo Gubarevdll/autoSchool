@@ -24,4 +24,5 @@ public class Subtask1 {
         /*(Добавил с использованием этой конструкции)*/
 
         System.out.println(result);
-}}
+    }
+}

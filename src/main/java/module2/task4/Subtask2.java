@@ -3,6 +3,7 @@
  */
 
 package module2.task4;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -10,25 +11,25 @@ public class Subtask2 {
     public static void main(String[] args) throws Exception {
 
         System.out.println("Type the sentence:");
-        InputStreamReader a=new InputStreamReader(System.in);
-        BufferedReader bra=new BufferedReader(a);
-        String original=bra.readLine();
+        InputStreamReader a = new InputStreamReader(System.in);
+        BufferedReader bra = new BufferedReader(a);
+        String original = bra.readLine();
         //Исходную строку тоже должнен вводить пользователь
 
         //(Исправил)
 
         System.out.println("Please choose the word you want to replace");
-        InputStreamReader r=new InputStreamReader(System.in);
-        BufferedReader br=new BufferedReader(r);
-        String original_word=br.readLine();
+        InputStreamReader r = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(r);
+        String original_word = br.readLine();
 
         System.out.println("Please type a replacement word");
 
-        InputStreamReader b=new InputStreamReader(System.in);
-        BufferedReader br2=new BufferedReader(b);
-        String replacement_word =br2.readLine();
+        InputStreamReader b = new InputStreamReader(System.in);
+        BufferedReader br2 = new BufferedReader(b);
+        String replacement_word = br2.readLine();
 
-        System.out.println(original.replace( original_word,replacement_word));
+        System.out.println(original.replace(original_word, replacement_word));
     }
 }
 

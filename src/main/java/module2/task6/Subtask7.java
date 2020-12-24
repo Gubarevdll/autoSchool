@@ -20,28 +20,27 @@ public class Subtask7 {
         // (это я оставлял для проверки и потом забыл удалить)
 
 
-            for (int i = 0; i <= 6; i++) {
+        for (int i = 0; i <= 6; i++) {
 
 
-                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-                System.out.println("Введите число");
-                String a = reader.readLine();
-                int x = Integer.parseInt(a.trim());
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Введите число");
+            String a = reader.readLine();
+            int x = Integer.parseInt(a.trim());
 
 
-
-                if (i == 6) {
-                    System.out.println("Это была последняя попытка");
-                } else if (x < secret) {
-                    System.out.println("Мало");
-                } else if (x > secret) {
-                    System.out.println("Много");
-                } else if (x == secret) {
-                    System.out.println("Угадал :)");
-                    break;
-                }
+            if (i == 6) {
+                System.out.println("Это была последняя попытка");
+            } else if (x < secret) {
+                System.out.println("Мало");
+            } else if (x > secret) {
+                System.out.println("Много");
+            } else if (x == secret) {
+                System.out.println("Угадал :)");
+                break;
             }
+        }
     }
-    }
+}
 
 
