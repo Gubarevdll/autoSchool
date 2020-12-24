@@ -14,7 +14,7 @@ public class Round extends Figure {
 
 
     public Round(int name) {
-        this.name = "Round №" + name;
+        this.name = "Round № " + name;
         setCoordinates();
         setSpace();
     }

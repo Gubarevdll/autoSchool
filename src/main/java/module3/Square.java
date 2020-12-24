@@ -18,7 +18,7 @@ public class Square extends Figure {
 
 
     public Square(int name) {
-        this.name = "Square №" + name;
+        this.name = "Square № " + name;
         setCoordinates();
         setSpace();
     }

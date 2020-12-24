@@ -21,7 +21,7 @@ public class Triangle extends Figure{
 
 
     public Triangle(int name){
-        this.name = "Triangle №" + name;
+        this.name = "Triangle № " + name;
         setCoordinates();
         setSpace();
     }
