@@ -14,28 +14,29 @@ public class Round extends Figure {
 
 
     public Round(int name) {
-        this.name = "Round #" + name;
+        this.name = "Round №" + name;
+        setCoordinates();
+        setSpace();
     }
 
     @Override
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     @Override
     public void setCoordinates() {
         Random random = new Random();
 
-        this.name = "Round №" + name;
         this.a_x = random.nextInt(10 + 1);
         this.a_y = random.nextInt(10 + 1);
         this.b_x = a_x;
-        this.b_y = random.nextInt(10 + 1);
+        this.b_y = a_x+random.nextInt(10 + 1);
         this.radius = Math.abs(a_y - b_y);
         this.space = Math.PI * (radius * radius);
 
-        double[] coordinates = {a_y, a_y, b_x, b_y, radius};
-        this.coordinates = coordinates;
+        double[] cord = {a_y, a_y, b_x, b_y, radius};
+        this.coordinates = cord;
     }
 
     @Override
@@ -44,9 +45,9 @@ public class Round extends Figure {
     }
 
     @Override
-    public void setSpace(double space) {
+    public void setSpace() {
         this.space = Math.PI * (radius * radius);
-        this.space = space;
+
     }
 
     @Override
@@ -56,11 +57,16 @@ public class Round extends Figure {
 
     @Override
     public void showCoordinates() {
+        int ax = (int) a_x;
+
+
         System.out.println(name);
-        System.out.println("Round point a: x=" + a_x + " y=" + a_y);
-        System.out.println("Round point b: x=" + b_x + " y=" + b_y);
-        System.out.println("Round radius : " + radius);
-        System.out.println("Space = " + space);
-        super.showCoordinates();
+        System.out.println(name + " point a: x=" + (int)a_x + " y=" + (int)a_y);
+        System.out.println(name + " point b: x=" + (int)b_x + " y=" + (int)b_y);
+        System.out.println(name + " radius : " + radius);
+        System.out.println(name + " space = " + space);
+        System.out.println(" ");
+
+        //Все приведено в инты на выводе просто для того, что бы легче читалось
     }
 }

@@ -10,7 +10,7 @@ public class Triangle extends Figure{
     private double a_y;
     private double b_x_center;
     private double b_y_center;
-    private double halh_width;
+    private double half_width;
     private double c_x;
     private double c_y;
     private double d_x;
@@ -22,6 +22,8 @@ public class Triangle extends Figure{
 
     public Triangle(int name){
         this.name = "Triangle №" + name;
+        setCoordinates();
+        setSpace();
     }
 
     @Override
@@ -37,15 +39,15 @@ public class Triangle extends Figure{
         this.a_y = random.nextInt(10 + 1);
         this.b_x_center = a_x;
         this.b_y_center = a_y+random.nextInt(10 + 1);
-        this.c_x = b_x_center-halh_width;
+        this.half_width = 1+random.nextInt(10 + 1);
+        this.c_x = b_x_center-half_width;
         this.c_y = b_y_center;
-        this.d_x = b_x_center+halh_width;
+        this.d_x = b_x_center+half_width;
         this.d_y = b_y_center;
-        this.halh_width = random.nextInt(10 + 1);
         this.height = Math.abs(a_y-b_y_center);
         this.width = Math.abs(c_x-d_x);
 
-        double[]cord = {a_x, a_y, b_x_center, b_y_center, c_x, c_y, d_x, d_y, halh_width};
+        double[]cord = {a_x, a_y, b_x_center, b_y_center, half_width, c_x, c_y, d_x, d_y};
         this.coordinates = cord;
     }
 
@@ -55,7 +57,7 @@ public class Triangle extends Figure{
     }
 
     @Override
-    public void setSpace(double space) {
+    public void setSpace() {
         this.space = (width*height)/2;
     }
 
@@ -67,10 +69,13 @@ public class Triangle extends Figure{
     @Override
     public void showCoordinates() {
         System.out.println(name);
-        System.out.println("Triangle point a: x="+ a_x+" y="+ a_y);
-        System.out.println("Triangle low-center: x="+ b_x_center+" y="+ b_y_center);
-        System.out.println("Triangle point c: x="+ c_x+" y="+ c_y);
-        System.out.println("Triangle point d: x="+ d_x+" y="+ d_y);
+        System.out.println(name+ " point a: x="+ (int)a_x+" y="+ (int)a_y);
+        System.out.println(name+ " point c: x="+ (int)c_x+" y="+ (int)c_y);
+        System.out.println(name+ " point d: x="+ (int)d_x+" y="+ (int)d_y);
+        System.out.println(name+ " space = " + space);
+        System.out.println("");
+
+        //Все приведено в инты на выводе просто для того, что бы легче читалось
     }
 }
 

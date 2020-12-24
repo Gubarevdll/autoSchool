@@ -14,7 +14,7 @@ public abstract class Figure {
 
 
     public Figure(int name) {
-        this.name = "Figure #:" + name;
+        this.name = "Figure №:" + name;
     }
 
     public String getName() {
@@ -25,7 +25,7 @@ public abstract class Figure {
         return space;
     }
 
-    public void setSpace(double space) {
+    public void setSpace() {
         this.space = space;
     }
 

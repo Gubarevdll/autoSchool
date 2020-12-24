@@ -19,6 +19,8 @@ public class Square extends Figure {
 
     public Square(int name) {
         this.name = "Square №" + name;
+        setCoordinates();
+        setSpace();
     }
 
     @Override
@@ -45,7 +47,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void setSpace(double space) {
+    public void setSpace() {
         this.space = side_length * side_length;
     }
 
@@ -58,11 +60,14 @@ public class Square extends Figure {
     public void showCoordinates() {
 
         System.out.println(name);
-        System.out.println("Square point a: x=" + a_x + " y=" + a_y);
-        System.out.println("Square point b: x=" + b_x + " y=" + b_y);
-        System.out.println("Square point c: x=" + c_x + " y=" + c_y);
-        System.out.println("Square point d: x=" + d_x + " y=" + d_y);
-        System.out.println("Square space = " + space);
+        System.out.println(name + " point a: x=" + (int)a_x + " y=" + (int)a_y);
+        System.out.println(name + " point b: x=" + (int)b_x + " y=" + (int)b_y);
+        System.out.println(name + " point c: x=" + (int)c_x + " y=" + (int)c_y);
+        System.out.println(name + " point d: x=" + (int)d_x + " y=" + (int)d_y);
+        System.out.println(name + " space = " + space);
+        System.out.println(" ");
+
+        //Все приведено в инты на выводе просто для того, что бы легче читалось
     }
 }
 
