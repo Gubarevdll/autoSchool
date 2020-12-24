@@ -21,7 +21,7 @@ public class Round extends Figure {
 
     @Override
     public String getName() {
-        return super.getName();
+        return name;
     }
 
     @Override

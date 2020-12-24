@@ -24,6 +24,11 @@ public class Square extends Figure {
     }
 
     @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
     public void setCoordinates() {
         Random random = new Random();
 
