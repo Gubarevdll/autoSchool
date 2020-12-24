@@ -57,7 +57,9 @@ public class Main {
 
         Arrays.sort(sorteddoubles);
 
-        /*System.out.println(sorteddoubles[0]);
+        System.out.println();
+        System.out.println("sorteddoubles");
+        System.out.println(sorteddoubles[0]);
         System.out.println(sorteddoubles[1]);
         System.out.println(sorteddoubles[2]);
         System.out.println(sorteddoubles[3]);
@@ -66,7 +68,7 @@ public class Main {
         System.out.println(sorteddoubles[6]);
         System.out.println(sorteddoubles[7]);
         System.out.println(sorteddoubles[8]);
-        System.out.println(sorteddoubles[9]);*/
+        System.out.println(sorteddoubles[9]);
 
 
         Figure[] fig = new Figure[arr.length];
@@ -75,12 +77,14 @@ public class Main {
             Figure qwe = arr[a];
             for (int i = 0; i < arr.length; i++) {
                 if (qwe.getSpace() == sorteddoubles[i]) {
-                    fig[i] = arr[i];
+                    fig[i] = qwe;
                 }
             }
         }
 
-        /*System.out.println("Фигруа - :" + fig[0].getName() +" площадь - " + fig[0].getSpace());
+        System.out.println(" ");
+        System.out.println("сорт");
+        System.out.println("Фигруа - :" + fig[0].getName() +" площадь - " + fig[0].getSpace());
         System.out.println("Фигруа - :" + fig[1].getName() +" площадь - " + fig[1].getSpace());
         System.out.println("Фигруа - :" + fig[2].getName() +" площадь - " + fig[2].getSpace());
         System.out.println("Фигруа - :" + fig[3].getName() +" площадь - " + fig[3].getSpace());
@@ -89,6 +93,6 @@ public class Main {
         System.out.println("Фигруа - :" + fig[6].getName() +" площадь - " + fig[6].getSpace());
         System.out.println("Фигруа - :" + fig[7].getName() +" площадь - " + fig[7].getSpace());
         System.out.println("Фигруа - :" + fig[8].getName() +" площадь - " + fig[8].getSpace());
-        System.out.println("Фигруа - :" + fig[9].getName() +" площадь - " + fig[9].getSpace());*/
+        System.out.println("Фигруа - :" + fig[9].getName() +" площадь - " + fig[9].getSpace());
     }
 }
