@@ -13,7 +13,7 @@ public class Main {
         Figure[] result = sortFigures(random_objects);
 
         for (int i = 0; i < result.length; i++) {
-            System.out.println("Обьект - " + result[i].getName() + ", Площадь - " + result[i].getSpace() + result[i].getSpace());
+            System.out.println("Обьект - " + result[i].getName() + ", Площадь - " + result[i].getSpace());
         }
     }
 
