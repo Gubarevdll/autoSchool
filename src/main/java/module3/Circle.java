@@ -2,7 +2,7 @@ package module3;
 
 import java.util.Random;
 
-public class Round extends Figure {
+public class Circle extends Figure {
     private String name;
     private double[] coordinates = new double[5];
     private double a_x;
@@ -13,8 +13,8 @@ public class Round extends Figure {
     private double space;
 
 
-    public Round(int name) {
-        this.name = "Round № " + name;
+    public Circle(int name) {
+        this.name = "Circle № " + name;
         setCoordinates();
         setSpace();
     }
@@ -31,7 +31,7 @@ public class Round extends Figure {
         this.a_x = random.nextInt(10 + 1);
         this.a_y = random.nextInt(10 + 1);
         this.b_x = a_x;
-        this.b_y = a_x+random.nextInt(10 + 1);
+        this.b_y = (a_y + 1) + random.nextInt(10 + 1);
         this.radius = Math.abs(a_y - b_y);
         this.space = Math.PI * (radius * radius);
 
@@ -47,7 +47,6 @@ public class Round extends Figure {
     @Override
     public void setSpace() {
         this.space = Math.PI * (radius * radius);
-
     }
 
     @Override
@@ -61,11 +60,10 @@ public class Round extends Figure {
 
 
         System.out.println(name);
-        System.out.println(name + " point a: x=" + (int)a_x + " y=" + (int)a_y);
-        System.out.println(name + " point b: x=" + (int)b_x + " y=" + (int)b_y);
+        System.out.println(name + " point a: x=" + (int) a_x + " y=" + (int) a_y);
+        System.out.println(name + " point b: x=" + (int) b_x + " y=" + (int) b_y);
         System.out.println(name + " radius : " + radius);
-        System.out.println(name + " space = " + space);
-        System.out.println(" ");
+        System.out.println(name + " space = " + space + "\n");
 
         //Все приведено в инты на выводе просто для того, что бы легче читалось
     }

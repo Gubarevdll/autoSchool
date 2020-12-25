@@ -2,15 +2,17 @@ package module3;
 
 public abstract class Figure {
 
-     private String name;
-     private double space;
-     private double[] coordinates;
+    private String name;
+    private double space;
+    private double[] coordinates;
 
     protected Figure() {
     }
-    //Здесь не совсем понятно, я не смог создать конструктов в классе неследнике,
-    //Идея предложила создать пустой конструктор и только потом получилось создать его в наследнике
-    // У меня есть конструктор с параметрами, зачем в таком случае прописывать пустой?
+    /*Здесь не совсем понятно, я не мог создать конструктор в классах-наследниках
+    пока не прописал пустой конструктор в классе-родителе. При этом в классе родителе у меня
+    уже был написан конструктор принимающий парметр int, но создать или оверрайдить такой же в
+    наследниках я не могу, пока не написал пустой конструктор.
+     */
 
 
     public Figure(int name) {
@@ -38,6 +40,6 @@ public abstract class Figure {
         this.coordinates = coordinates;
     }
 
-    public void showCoordinates(){
+    public void showCoordinates() {
     }
 }

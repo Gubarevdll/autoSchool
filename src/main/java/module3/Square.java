@@ -35,7 +35,7 @@ public class Square extends Figure {
         this.a_x = random.nextInt(10 + 1);
         this.a_y = random.nextInt(10 + 1);
         this.b_x = a_x;
-        this.b_y = a_y + random.nextInt(10 + 1);
+        this.b_y = (a_y + 1) + random.nextInt(10 + 1);
         this.c_x = Math.abs(a_y - b_y) + a_x;
         this.c_y = a_y;
         this.d_x = c_x;
@@ -65,12 +65,11 @@ public class Square extends Figure {
     public void showCoordinates() {
 
         System.out.println(name);
-        System.out.println(name + " point a: x=" + (int)a_x + " y=" + (int)a_y);
-        System.out.println(name + " point b: x=" + (int)b_x + " y=" + (int)b_y);
-        System.out.println(name + " point c: x=" + (int)c_x + " y=" + (int)c_y);
-        System.out.println(name + " point d: x=" + (int)d_x + " y=" + (int)d_y);
-        System.out.println(name + " space = " + space);
-        System.out.println(" ");
+        System.out.println(name + " point a: x=" + (int) a_x + " y=" + (int) a_y);
+        System.out.println(name + " point b: x=" + (int) b_x + " y=" + (int) b_y);
+        System.out.println(name + " point c: x=" + (int) c_x + " y=" + (int) c_y);
+        System.out.println(name + " point d: x=" + (int) d_x + " y=" + (int) d_y);
+        System.out.println(name + " space = " + space + "\n");
 
         //Все приведено в инты на выводе просто для того, что бы легче читалось
     }
