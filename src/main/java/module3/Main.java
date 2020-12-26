@@ -10,33 +10,12 @@ public class Main {
 
 
         Figure[] random_objects = create10RandomObjects();
-        Figure[] result = sortFigures(random_objects);
+        Figure[] sorted_objects = sortFigures(random_objects);
 
-        for (int i = 0; i < result.length; i++) {
-            System.out.println("Обьект - " + result[i].getName() + ", Площадь - " + result[i].getSpace());
+
+        for (int i = 0; i < random_objects.length; i++) {
+            System.out.println("Обьект - " + sorted_objects[i].getName() + ", Площадь - " + sorted_objects[i].getSpace());
         }
-    }
-
-    public static Figure[] sortFigures(Figure[] arr) {
-        double[] sorteddoubles = new double[arr.length];
-
-        for (int i = 0; i < arr.length; i++) {
-            double iter = arr[i].getSpace();
-            sorteddoubles[i] = iter;
-        }
-
-        Arrays.sort(sorteddoubles);
-        Figure[] fig = new Figure[arr.length];
-
-        for (int a = 0; a < arr.length; a++) {
-            Figure qwe = arr[a];
-            for (int i = 0; i < arr.length; i++) {
-                if (qwe.getSpace() == sorteddoubles[i]) {
-                    fig[i] = qwe;
-                }
-            }
-        }
-        return fig;
     }
 
     public static Figure[] create10RandomObjects() {
@@ -53,4 +32,21 @@ public class Main {
         }
         return figures;
     }
+
+    public static Figure[] sortFigures(Figure[] arr) {
+        boolean isSorted = false;
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 1; i < arr.length; i++) {
+                if (arr[i].getSpace() < arr[i - 1].getSpace()) {
+                    Figure temp = arr[i];
+                    arr[i] = arr[i - 1];
+                    arr[i - 1] = temp;
+                    isSorted = false;
+                }
+            }
+        }
+        return arr;
+    }
+
 }
