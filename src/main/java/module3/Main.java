@@ -1,21 +1,13 @@
 package module3;
 
-import java.util.Arrays;
-
 public class Main {
-
-    private static Object object;
 
     public static void main(String[] args) {
 
+        Figure[] sorted_objects = sortFigures(create10RandomObjects());
 
-        Figure[] random_objects = create10RandomObjects();
-        Figure[] sorted_objects = sortFigures(random_objects);
-
-
-        for (int i = 0; i < random_objects.length; i++) {
-            System.out.println("Обьект - " + sorted_objects[i].getName() + ", Площадь - " + sorted_objects[i].getSpace());
-        }
+        for (Figure sorted_object : sorted_objects)
+            System.out.println("Обьект - " + sorted_object.getName() + ", Площадь - " + sorted_object.getSpace());
     }
 
     public static Figure[] create10RandomObjects() {
