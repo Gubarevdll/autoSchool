@@ -1,10 +1,10 @@
-package module3;
+package module3.figure;
 
 public abstract class Figure {
 
-    private String name;
-    private double space;
-    private double[] coordinates;
+    protected String name;
+    protected int space;
+    protected int[] coordinates;
 
     protected Figure() {
     }
@@ -14,13 +14,8 @@ public abstract class Figure {
     наследниках я не могу, пока не написал пустой конструктор.
      */
 
-
-    public Figure(int name) {
-        this.name = "Figure №:" + name;
-    }
-
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public double getSpace() {
@@ -28,16 +23,14 @@ public abstract class Figure {
     }
 
     public void setSpace() {
-        this.space = space;
     }
 
-    public double[] getCoordinates() {
-        return coordinates;
+    public int[] getCoordinates() {
+        return this.coordinates;
     }
 
     public void setCoordinates() {
-        double[] coordinates = new double[0];
-        this.coordinates = coordinates;
+        this.coordinates = new int[0];
     }
 
     public void showCoordinates() {

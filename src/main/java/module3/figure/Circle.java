@@ -1,17 +1,15 @@
-package module3;
+package module3.figure;
 
 import java.util.Random;
 
 public class Circle extends Figure {
-    private String name;
-    private double[] coordinates = new double[5];
-    private double a_x;
-    private double a_y;
-    private double b_x;
-    private double b_y;
-    private double radius;
-    private double space;
 
+    private int[] coordinates = new int[5];
+    private int a_x;
+    private int a_y;
+    private int b_x;
+    private int b_y;
+    private int radius;
 
     public Circle(int name) {
         this.name = "Circle № " + name;
@@ -25,6 +23,11 @@ public class Circle extends Figure {
     }
 
     @Override
+    public double getSpace() {
+        return space;
+    }
+
+    @Override
     public void setCoordinates() {
         Random random = new Random();
 
@@ -33,35 +36,28 @@ public class Circle extends Figure {
         this.b_x = a_x;
         this.b_y = (a_y + 1) + random.nextInt(10 + 1);
         this.radius = Math.abs(a_y - b_y);
-        this.space = Math.PI * (radius * radius);
 
-        double[] cord = {a_y, a_y, b_x, b_y, radius};
-        this.coordinates = cord;
+
+        this.coordinates = new int[]{a_y, a_y, b_x, b_y, radius};
     }
 
     @Override
-    public double[] getCoordinates() {
+    public int[] getCoordinates() {
         return coordinates;
     }
 
     @Override
     public void setSpace() {
-        this.space = Math.PI * (radius * radius);
+        this.space = (int) Math.round(Math.PI * (radius * radius));
     }
 
-    @Override
-    public double getSpace() {
-        return space;
-    }
 
     @Override
     public void showCoordinates() {
-        int ax = (int) a_x;
-
 
         System.out.println(name);
-        System.out.println(name + " point a: x=" + (int) a_x + " y=" + (int) a_y);
-        System.out.println(name + " point b: x=" + (int) b_x + " y=" + (int) b_y);
+        System.out.println(name + " point a: x=" + a_x + " y=" + a_y);
+        System.out.println(name + " point b: x=" + b_x + " y=" + b_y);
         System.out.println(name + " radius : " + radius);
         System.out.println(name + " space = " + space + "\n");
 

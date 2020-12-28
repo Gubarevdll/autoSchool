@@ -1,5 +1,10 @@
 package module3;
 
+import module3.figure.Circle;
+import module3.figure.Figure;
+import module3.figure.Square;
+import module3.figure.Triangle;
+
 public class Main {
 
     public static void main(String[] args) {
