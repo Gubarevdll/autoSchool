@@ -4,56 +4,47 @@ import java.util.Random;
 
 public class Triangle extends Figure {
 
-    private int a_x;
-    private int a_y;
-    private int c_x;
-    private int c_y;
-    private int d_x;
-    private int d_y;
-    private int height;
-    private int width;
-
-
     public Triangle(int name) {
-        this.name = "Triangle № " + name;
-        setCoordinates();
-        setSpace();
+        setName("Triangle #" + name);
+        setCoordinates(new int[15]);
+        setSpace(1);
     }
 
     @Override
-    public void setCoordinates() {
+    public void setCoordinates(int[] cords) {
         Random random = new Random();
 
-        this.a_x = random.nextInt(10 + 1);
-        this.a_y = random.nextInt(10 + 1);
+        int a_x = random.nextInt(10 + 1);
+        int a_y = random.nextInt(10 + 1);
         int b_x_center = a_x;
         int b_y_center = (a_y + 1) + random.nextInt(10 + 1);
         int half_width = 1 + random.nextInt(10 + 1);
-        this.c_x = b_x_center - half_width;
-        this.c_y = b_y_center;
-        this.d_x = b_x_center + half_width;
-        this.d_y = b_y_center;
-        this.height = Math.abs(a_y - b_y_center);
-        this.width = Math.abs(c_x - d_x);
+        int c_x = b_x_center - half_width;
+        int c_y = b_y_center;
+        int d_x = b_x_center + half_width;
+        int d_y = b_y_center;
+        int height = Math.abs(a_y - b_y_center);
+        int width = Math.abs(c_x - d_x);
 
-        this.coordinates = new int[]{a_x, a_y, b_x_center, b_y_center, half_width, c_x, c_y, d_x, d_y};
+        super.setCoordinates(new int[]{a_x, a_y, b_x_center, b_y_center, half_width, c_x, c_y, d_x, d_y, height, width});
     }
 
     @Override
-    public void setSpace() {
-        this.space = (width * height) / 2;
+    public void setSpace(int space) {
+        int[] cords = super.getCoordinates();
+        space = (cords[9] * cords[10]) / 2;
+        super.setSpace(space);
     }
 
     @Override
     public void showCoordinates() {
-        System.out.println(name);
-        System.out.println(name + " point a: x=" + a_x + " y=" + a_y);
-        System.out.println(name + " point c: x=" + c_x + " y=" + c_y);
-        System.out.println(name + " point d: x=" + d_x + " y=" + d_y);
-        System.out.println(name + " space = " + space + "\n");
+        int[] cords = super.getCoordinates();
 
-
-        //Все приведено в инты на выводе просто для того, что бы легче читалось
+        System.out.println(getName());
+        System.out.println(getName() + " point a: x=" + cords[0] + " y=" + +cords[1]);
+        System.out.println(getName() + " point c: x=" + cords[5] + " y=" + +cords[6]);
+        System.out.println(getName() + " point d: x=" + cords[7] + " y=" + +cords[8]);
+        System.out.println(getName() + " space = " + getSpace() + "\n");
     }
 }
 
