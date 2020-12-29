@@ -6,7 +6,7 @@ public class Triangle extends Figure {
 
     public Triangle(int name) {
         setName("Triangle #" + name);
-        setCoordinates(new int[15]);
+        setCoordinates(new int[1]);
         setSpace(1);
     }
 

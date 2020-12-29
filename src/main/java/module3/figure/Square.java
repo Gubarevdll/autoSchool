@@ -6,7 +6,7 @@ public class Square extends Figure {
 
     public Square(int name) {
         setName("Square #" + name);
-        setCoordinates(new int[8]);
+        setCoordinates(new int[1]);
         setSpace(1);
     }
 

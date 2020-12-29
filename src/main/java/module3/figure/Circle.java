@@ -6,7 +6,7 @@ public class Circle extends Figure {
 
     public Circle(int name) {
         setName("Circle #" + name);
-        setCoordinates(new int[4]);
+        setCoordinates(new int[1]);
         setSpace(1);
     }
 
