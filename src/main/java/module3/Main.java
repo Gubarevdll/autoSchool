@@ -9,25 +9,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Figure[] sorted_objects = sortFigures(create10RandomObjects());
+        Figure[] figures = new Figure[10];
+        for (int i = 0; i < figures.length; i++) {
+            figures[i] = createRandomFigure(i);
+        }
 
-        for (Figure sorted_object : sorted_objects)
-            System.out.println("Обьект - " + sorted_object.getName() + ", Площадь - " + sorted_object.getSpace());
+        Figure[] sorted_objects = sortFigures(figures);
+
+        for (Figure sorted_object : sorted_objects) {
+            System.out.println("Фигруа - " + sorted_object.getName() + ", площадь - " + sorted_object.getSpace());
+        }
+
     }
 
-    public static Figure[] create10RandomObjects() {
-        Figure[] figures = new Figure[10];
-        for (int i = 0; i < 10; i++) {
-            double rand = Math.random();
-            if (rand <= 0.33) {
-                figures[i] = new Square(i);
-            } else if (rand <= 0.66) {
-                figures[i] = new Triangle(i);
-            } else if (rand > 0.33) {
-                figures[i] = new Circle(i);
-            }
-        }
-        return figures;
+    public static Figure createRandomFigure(int name) {
+        double rand = Math.random();
+        if (rand <= 0.33) {
+            return new Square(name);
+        } else if (rand <= 0.66) {
+            return new Triangle(name);
+        } else
+            return new Circle(name);
     }
 
     public static Figure[] sortFigures(Figure[] arr) {
