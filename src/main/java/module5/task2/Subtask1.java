@@ -6,7 +6,7 @@ public class Subtask1 {
 
     public static void main(String[] args) {
 
-        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        HashMap<String, Integer> map = new HashMap<>();
         map.put("арбуз" , 1);
         map.put("банан" , 2);
         map.put("груша" , 3);
