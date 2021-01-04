@@ -10,13 +10,13 @@ public class Logic {
 
         static private void privateMethod(){
             line = "original line";
-            LOGGER.warn("Private method has been called");
+            LOGGER.info("Private method has been called");
         }
 
         static public void publicMethod(){
             privateMethod();
             line = line + " with changes";
-            LOGGER.warn("Public method has been called");
+            LOGGER.info("Public method has been called");
         }
 
 }
