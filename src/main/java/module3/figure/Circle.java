@@ -1,33 +1,29 @@
 package module3.figure;
 
-import java.util.Random;
 
 public class Circle extends Figure {
 
-    public Circle(int name) {
+    public Circle(int name, int size) {
         setName("Circle #" + name);
-        setCoordinates(new int[1]);
-        setSpace(1);
+        setCoordinates(buildCoordinates(size));
+        setSpace(evaluateSpace());
     }
 
     @Override
-    public void setCoordinates(int[] cords) {
-        Random random = new Random();
-
-        int a_x = random.nextInt(10 + 1);
-        int a_y = random.nextInt(10 + 1);
+    public int[] buildCoordinates(int size) {
+        int a_x = size;
+        int a_y = size;
         int b_x = a_x;
-        int b_y = (a_y + 1) + random.nextInt(10 + 1);
+        int b_y = (a_y + 1) + size;
         int radius = Math.abs(a_y - b_y);
 
-        super.setCoordinates(new int[]{a_x, a_y, b_x, b_y, radius});
+        return new int[]{a_x, a_y, b_x, b_y, radius};
     }
 
     @Override
-    public void setSpace(int space) {
+    public int evaluateSpace() {
         int[] cords = super.getCoordinates();
-        space = (int) Math.round(Math.PI * (cords[4] * cords[4]));
-        super.setSpace(space);
+        return (int) Math.round(Math.PI * (cords[4] * cords[4]));
     }
 
     @Override

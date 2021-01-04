@@ -1,24 +1,22 @@
 package module3.figure;
 
-import java.util.Random;
 
 public class Triangle extends Figure {
 
-    public Triangle(int name) {
+    public Triangle(int name, int size) {
         setName("Triangle #" + name);
-        setCoordinates(new int[1]);
-        setSpace(1);
+        setCoordinates(buildCoordinates(size));
+        setSpace(evaluateSpace());
     }
 
-    @Override
-    public void setCoordinates(int[] cords) {
-        Random random = new Random();
 
-        int a_x = random.nextInt(10 + 1);
-        int a_y = random.nextInt(10 + 1);
+    @Override
+    public int[] buildCoordinates(int size) {
+        int a_x = size;
+        int a_y = size;
         int b_x_center = a_x;
-        int b_y_center = (a_y + 1) + random.nextInt(10 + 1);
-        int half_width = 1 + random.nextInt(10 + 1);
+        int b_y_center = (a_y + 1) + size;
+        int half_width = 1 + size;
         int c_x = b_x_center - half_width;
         int c_y = b_y_center;
         int d_x = b_x_center + half_width;
@@ -26,14 +24,13 @@ public class Triangle extends Figure {
         int height = Math.abs(a_y - b_y_center);
         int width = Math.abs(c_x - d_x);
 
-        super.setCoordinates(new int[]{a_x, a_y, b_x_center, b_y_center, half_width, c_x, c_y, d_x, d_y, height, width});
+        return new int[]{a_x, a_y, b_x_center, b_y_center, half_width, c_x, c_y, d_x, d_y, height, width};
     }
 
     @Override
-    public void setSpace(int space) {
+    public int evaluateSpace() {
         int[] cords = super.getCoordinates();
-        space = (cords[9] * cords[10]) / 2;
-        super.setSpace(space);
+        return (cords[9] * cords[10]) / 2;
     }
 
     @Override

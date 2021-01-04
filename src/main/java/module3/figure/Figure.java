@@ -32,4 +32,8 @@ public abstract class Figure {
 
     public void showCoordinates() {
     }
+
+    public abstract int evaluateSpace();
+
+    public abstract int[] buildCoordinates(int size);
 }

@@ -25,11 +25,11 @@ public class Main {
     public static Figure createRandomFigure(int name) {
         double rand = Math.random();
         if (rand <= 0.33) {
-            return new Square(name);
+            return new Square(name, randomSize());
         } else if (rand <= 0.66) {
-            return new Triangle(name);
+            return new Triangle(name, randomSize());
         } else
-            return new Circle(name);
+            return new Circle(name, randomSize());
     }
 
     public static Figure[] sortFigures(Figure[] arr) {
@@ -46,5 +46,9 @@ public class Main {
             }
         }
         return arr;
+    }
+
+    private static int randomSize() {
+        return (int) Math.round(Math.random() * 10 + 1);
     }
 }
