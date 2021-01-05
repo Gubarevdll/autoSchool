@@ -20,6 +20,4 @@ public class Subtask1 {
 
         System.out.println(map);
     }
-
-
 }
