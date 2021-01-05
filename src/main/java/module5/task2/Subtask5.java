@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Subtask2 {
+public class Subtask5 {
     public static void main(String[] args) {
 
         HashMap<String, String> map = new HashMap();
@@ -22,7 +22,8 @@ public class Subtask2 {
         Map<String, String> reversedMap = new TreeMap<String, String>(map);
 
         for (Map.Entry entry : reversedMap.entrySet()) {
-            System.out.println(entry.getKey() + " - " + entry.getValue());
+            System.out.println(entry.getValue());
         }
     }
 }
+
