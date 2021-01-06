@@ -15,7 +15,7 @@ public class Subtask11 {
             list.add(a);
         }
 
-        for (int i = 0; i < 13; i++){
+        for (int i = 0; i < 13; i++) {
             String buff = list.get(4);
             list.remove(4);
             list.add(0, buff);

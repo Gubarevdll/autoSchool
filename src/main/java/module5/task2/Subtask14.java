@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Subtask14 {
-   public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         Map<String, String> map = new HashMap<>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -15,17 +15,16 @@ public class Subtask14 {
         System.out.println("Введите имя для поиска:");
         String name = reader.readLine();
 
-
-       map.put("Песков", "Алексей");
-       map.put("Иванов", "Владимир");
-       map.put("Артемов", "Андрей");
-       map.put("Котов", "Роман");
-       map.put("Гнатенко", "Денис");
-       map.put("Петров", "Андрей");
-       map.put("Михайлов", "Артем");
-       map.put("Данилов", "Вадим");
-       map.put("Тихонов", "Стас");
-       map.put("Алексеенко", "Антон");
+        map.put("Песков", "Алексей");
+        map.put("Иванов", "Владимир");
+        map.put("Артемов", "Андрей");
+        map.put("Котов", "Роман");
+        map.put("Гнатенко", "Денис");
+        map.put("Петров", "Андрей");
+        map.put("Михайлов", "Артем");
+        map.put("Данилов", "Вадим");
+        map.put("Тихонов", "Стас");
+        map.put("Алексеенко", "Антон");
 
         int firstnameconter = 0;
         int lastnamecounter = 0;
@@ -33,21 +32,20 @@ public class Subtask14 {
         ArrayList<String> names = new ArrayList<>(map.values());
         ArrayList<String> lastnames = new ArrayList<>(map.keySet());
 
-        for (int i = 0; i < names.size(); i++){
-            if (names.get(i).equals(name)){
+        for (String s : names) {
+            if (s.equals(name)) {
                 firstnameconter++;
             }
         }
 
-       for (int i = 0; i < lastnames.size(); i++){
-           if (lastnames.get(i).equals(lastname)){
-               lastnamecounter++;
-           }
-       }
+        for (String s : lastnames) {
+            if (s.equals(lastname)) {
+                lastnamecounter++;
+            }
+        }
 
-       System.out.println("Количество людей с такой фамилией: " + lastnamecounter + ", с таким именем: " + firstnameconter);
-     }
+        System.out.println("Количество людей с такой фамилией: " + lastnamecounter + ", с таким именем: " + firstnameconter);
+    }
 }
 
-//To do - не забыть поставить фамилии первыми
 

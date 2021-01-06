@@ -19,7 +19,7 @@ public class Subtask2 {
         map.put("ирис", "цветок");
         map.put("картофель", "клубень");
 
-        Map<String, String> reversedMap = new TreeMap<String, String>(map);
+        Map<String, String> reversedMap = new TreeMap<>(map);
 
         for (Map.Entry entry : reversedMap.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue());

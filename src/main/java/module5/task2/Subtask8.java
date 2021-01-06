@@ -14,10 +14,10 @@ public class Subtask8 {
 
         int longest = list.get(0).length();
         String result = null;
-        for (int i = 0; i < list.size(); i++){
-            if (longest < list.get(i).length()){
-                longest = list.get(i).length();
-                result = list.get(i);
+        for (String s : list) {
+            if (longest < s.length()) {
+                longest = s.length();
+                result = s;
             }
         }
         System.out.println(result);

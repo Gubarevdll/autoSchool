@@ -14,10 +14,10 @@ public class Subtask9 {
 
         int shortest = list.get(0).length();
         String result = list.get(0);
-        for (int i = 0; i < list.size(); i++){
-            if (shortest > list.get(i).length()){
-                shortest = list.get(i).length();
-                result = list.get(i);
+        for (String s : list) {
+            if (shortest > s.length()) {
+                shortest = s.length();
+                result = s;
             }
         }
         System.out.println(result);

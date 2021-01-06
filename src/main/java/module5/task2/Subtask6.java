@@ -18,7 +18,7 @@ public class Subtask6 {
         map.put("nine", 9);
         map.put("ten", 10);
 
-        Map<String, Object> reversedMap = new TreeMap<String, Object>(map);
+        Map<String, Object> reversedMap = new TreeMap<>(map);
 
         for (Map.Entry entry : reversedMap.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue());
