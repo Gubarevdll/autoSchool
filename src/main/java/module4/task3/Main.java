@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
     final static Logger LOGGER = LogManager.getLogger(Logic.class.getName());
+
     public static void main(String[] args) {
 
 

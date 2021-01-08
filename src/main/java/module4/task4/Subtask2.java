@@ -16,7 +16,7 @@ public class Subtask2 {
             System.out.println("Ожидание 3 секунды...");
             Thread.sleep(3000);
 
-            int zero = 5/0;
+            int zero = 5 / 0;
 
             if (a.equals(b)) {
                 System.out.println("Имена идентичны");

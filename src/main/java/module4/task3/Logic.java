@@ -8,15 +8,15 @@ public class Logic {
     final static Logger LOGGER = LogManager.getLogger(Logic.class.getName());
 
 
-        static private void privateMethod(){
-            line = "original line";
-            LOGGER.info("Private method has been called");
-        }
+    static private void privateMethod() {
+        line = "original line";
+        LOGGER.info("Private method has been called");
+    }
 
-        static public void publicMethod(){
-            privateMethod();
-            line = line + " with changes";
-            LOGGER.info("Public method has been called");
-        }
+    static public void publicMethod() {
+        privateMethod();
+        line = line + " with changes";
+        LOGGER.info("Public method has been called");
+    }
 
 }
