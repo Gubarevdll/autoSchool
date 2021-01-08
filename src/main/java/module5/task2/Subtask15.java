@@ -31,7 +31,7 @@ public class Subtask15 {
         while (iterator.hasNext()) {
             Map.Entry<String, LocalDate> pair = iterator.next();
             int rad = pair.getValue().getMonthValue();
-            if (rad == 5 || rad == 6 || rad == 7)
+            if (rad == 6 || rad == 7 || rad == 8)
                 iterator.remove();
         }
     }

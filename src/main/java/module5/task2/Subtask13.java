@@ -27,12 +27,6 @@ public class Subtask13 {
         set.add(19);
         set.add(20);
 
-        HashSet result = removeAllNumbersLessThan10(set);
-        System.out.println(result);
-    }
-
-    public static HashSet removeAllNumbersLessThan10(HashSet<Integer> set) {
-        set.removeIf(number -> number < 10);
-        return set;
+        set.removeIf(number -> number > 10); System.out.println(set);
     }
 }

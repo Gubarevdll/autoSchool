@@ -7,7 +7,7 @@ import java.util.TreeMap;
 public class Subtask2 {
     public static void main(String[] args) {
 
-        HashMap<String, String> map = new HashMap();
+        HashMap<String, String> map = new HashMap<>();
         map.put("арбуз", "ягода");
         map.put("банан", "трава");
         map.put("вишня", "ягода");
@@ -19,9 +19,7 @@ public class Subtask2 {
         map.put("ирис", "цветок");
         map.put("картофель", "клубень");
 
-        Map<String, String> reversedMap = new TreeMap<>(map);
-
-        for (Map.Entry entry : reversedMap.entrySet()) {
+        for (Map.Entry entry : map.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue());
         }
     }
