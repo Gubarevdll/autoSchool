@@ -16,11 +16,13 @@ public class Subtask11 {
         }
 
         for (int i = 0; i < 13; i++) {
-            String buff = list.get(4);
-            list.remove(4);
+            String buff = list.get(list.size() - 1);
+            list.remove(list.size() - 1);
             list.add(0, buff);
         }
 
-        System.out.println(list);
+        for (String s : list) {
+            System.out.println(s);
+        }
     }
 }
