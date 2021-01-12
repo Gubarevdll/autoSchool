@@ -19,6 +19,10 @@ public class Subtask3 {
         map.put("ninth", new Cat("ninth"));
         map.put("tenth", new Cat("tenth"));
 
-        System.out.println(map);
+        for (Map.Entry entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+        }
+        //тут не совсем понятно с "Вывести результат на экран, каждый элемент с новой строки." как выводить
+        //обьекты, просто то, что в массиве или с .getClass. Пока вывел как есть в мапе
     }
 }
