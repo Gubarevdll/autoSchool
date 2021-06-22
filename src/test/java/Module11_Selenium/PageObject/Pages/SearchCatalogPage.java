@@ -31,11 +31,11 @@ public class SearchCatalogPage {
         driver.clickElement(SORT_HIGHEST_FIRST);
     }
 
-    public void validateSortOrder() {
-        List<WebElement> elements = (FOLDERS_IN_TEAM_CONTENT); //here will be all atributes
-        List<String> folderNames = driver.getAttributesNames(elements, FOLDER_NAME_ATTRIBUTE). //here will be price nmae
-                stream().map(e -> e.toLowerCase(Locale.ROOT)).collect(Collectors.toList());
-        assertTrue(Ordering.natural().isOrdered(folderNames));
-    }
+//    public void validateSortOrder() {
+//        List<WebElement> elements = (FOLDERS_IN_TEAM_CONTENT); //here will be all atributes
+//        List<String> folderNames = driver.getAttributesNames(elements, FOLDER_NAME_ATTRIBUTE). //here will be price nmae
+//                stream().map(e -> e.toLowerCase(Locale.ROOT)).collect(Collectors.toList());
+//        assertTrue(Ordering.natural().isOrdered(folderNames));
+//    }
 
 }
