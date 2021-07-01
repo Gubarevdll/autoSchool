@@ -2,6 +2,7 @@ package Module11_Selenium.PageObject.Pages;
 
 import Module11_Selenium.PageObject.WebDriverUtils;
 import com.google.common.collect.Ordering;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -16,6 +17,8 @@ public class SearchCatalogPage {
     public static final String SEARCH = "//input [@class='search_query form-control ac_input']";
     public static final String SORT_BUTTON = "//select [@ id='selectProductSort']";
     public static final String SORT_HIGHEST_FIRST = "//option [@value='price:desc']";
+    public static final String PRICES = "//div[@itemprop='offers']/span [@class='price product-price']";
+    public static final String CONTAINER = "//div[@ class='product-container']";
     private WebDriverUtils driver;
 
     public SearchCatalogPage(WebDriverUtils webDriver) {
@@ -31,11 +34,14 @@ public class SearchCatalogPage {
         driver.clickElement(SORT_HIGHEST_FIRST);
     }
 
-//    public void validateSortOrder() {
-//        List<WebElement> elements = (FOLDERS_IN_TEAM_CONTENT); //here will be all atributes
+
+    public void validateSortOrder() {
+        driver.test();
+//        List<WebElement> elements = driver.getAllElements(CONTAINER);
+//        System.out.println(elements.get(0).findElements(By.xpath("//span[@class='price product-price']")));
 //        List<String> folderNames = driver.getAttributesNames(elements, FOLDER_NAME_ATTRIBUTE). //here will be price nmae
 //                stream().map(e -> e.toLowerCase(Locale.ROOT)).collect(Collectors.toList());
 //        assertTrue(Ordering.natural().isOrdered(folderNames));
-//    }
+    }
 
 }

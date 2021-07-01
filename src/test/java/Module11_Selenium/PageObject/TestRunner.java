@@ -16,6 +16,7 @@ public class TestRunner {
         homePage.initiateHomePage();
         searchCatalogPage = homePage.goToSearch("Summer");
         searchCatalogPage.validateInput("Summer");
-        searchCatalogPage.sortHighestFirst();
+//        searchCatalogPage.sortHighestFirst();
+        searchCatalogPage.validateSortOrder();
     }
 }

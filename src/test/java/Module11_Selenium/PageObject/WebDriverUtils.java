@@ -47,7 +47,9 @@ public class WebDriverUtils {
         Thread.sleep(UI_INTERACTION_PAUSE);
     }
 
-
+    public List<WebElement> getAllElements(String xpath) {
+        return new ArrayList<>(driver.findElements(By.xpath(xpath)));
+    }
     public void refreshPage() {
         driver.navigate().refresh();
     }
@@ -58,6 +60,15 @@ public class WebDriverUtils {
 
     public List<String> getAttributesNames(List<WebElement> elements, String attributeName) {
         return elements.stream().map(e -> e.getAttribute(attributeName)).collect(Collectors.toList());
+    }
+    public static final String CONTAINER = "//div[@ class='product-container']";
+
+    public void test () {
+        List<WebElement> elements = getAllElements(CONTAINER);
+        System.out.println(elements.get(0).getAttribute("price product-price"));
+        System.out.println(elements.get(1).getAttribute("price product-price"));
+        System.out.println(elements.get(2).getAttribute("price product-price"));
+        System.out.println(elements.get(3).getAttribute("price product-price"));
     }
 
     public void quitDriver() {
